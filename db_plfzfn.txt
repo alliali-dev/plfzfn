@@ -1,0 +1,57 @@
+Demandeurs
+- nompnom_demandeur
+- numero_demandeur
+- sexe_demandeur
+- date_naiss_demandeur
+- lieux_naiss_demandeur
+- splieux_naiss_demandeur
+- handicap_demandeur
+- type_handicap_demandeur
+- nationalite_demandeur
+- naturep_demandeur
+- numero_demndeur
+- piece_demandeur 
+- contact1_demandeur
+- contact2_demandeur
+- pers_contact_urgent
+- contact_pers
+- lieu_rh_demandeur
+- sp_lieu_demandeur
+- nivetude_demandeur
+- diplome_demandeur
+- specialite_demandeur
+- annee_diplo_demandeur
+- occup_actu_demandeur 
+- agence_regionale_id
+- guichet_emplois_id
+- programme_id
+
+
+Users
+- id_users
+- nompnom_users
+- contact_users
+- role_users
+- email_users
+- password_users
+
+
+Programme
+- id_prog
+- libelle_prog
+
+Agence Regional
+- id_agence
+_ libelle_agence
+
+
+Guichet 
+- id_guichet 
+- libelle_guichet 
+- id_agence
+
+
+Role
+- id_role
+- libelle_role 
+
