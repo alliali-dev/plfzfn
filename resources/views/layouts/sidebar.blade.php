@@ -4,9 +4,9 @@
         </a>
         <img class="img-90 rounded-circle" src="{{ asset('assets/images/logo/logo.png') }}" alt="logo" sizes="32*32">
         <div class="badge-bottom">
-            <span class="badge badge-primary">New</span>
+            {{-- <span class="badge badge-primary">New</span> --}}
         </div><a href="user-profile.html">
-            <h6 class="mt-3 f-14 f-w-600">Emay Walter</h6>
+            <h6 class="mt-3 f-14 f-w-600">{{ auth()->user()->nom . ' ' . auth()->user()->prenoms }}</h6>
         </a>
         <p class="mb-0 font-roboto">Human Resources Department</p>
         <ul>
@@ -46,9 +46,9 @@
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                                 data-feather="airplay"></i><span>PARA&Egrave;TRES</span></a>
                         <ul class="nav-submenu menu-content">
-                            <li><a href="">Utilisateurs</a></li>
+                            <li><a href="{{ route('users.create') }}">Utilisateurs</a></li>
                             <li><a href="{{ route('agence.create') }}">Agences r&eacute;gionales</a></li>
-                            <li><a href="">Guichets emplois</a></li>
+                            <li><a href="{{ route('guichet.create') }}">Guichets emplois</a></li>
                             <li><a href="">R&ocirc;les</a></li>
                         </ul>
                     </li>
@@ -61,8 +61,8 @@
                         <a class="nav-link menu-title" href="javascript:void(0)"><i
                                 data-feather="layout"></i><span>DEMANDEURS</span></a>
                         <ul class="nav-submenu menu-content">
-                            <li><a href="">Enregistrer</a></li>
-                            <li><a href="">Liste</a></li>
+                            <li><a href="{{ route('demandeurs.create') }}">Enregistrer</a></li>
+                            <li><a href="{{ route('demandeurs.list') }}">Liste</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-main-title">

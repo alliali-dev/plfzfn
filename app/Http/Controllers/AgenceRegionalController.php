@@ -18,7 +18,7 @@ class AgenceRegionalController extends Controller
     public function list()
     {
         // retourne la liste d'agence
-        $agences = Agence_regional::select("*")->orderBy("created_at", "DESC")->get();
+        $agences = Agence_regional::select("*")->orderBy("created_at", "DESC")->paginate(15);
         return view("parametres.agences.list", compact('agences'));
     }
 
@@ -42,10 +42,10 @@ class AgenceRegionalController extends Controller
         $new_agence->save(); //on enregistre
         if ($new_agence) {
             # code...
-            return redirect()->route('agence.list')->with('success', 'Enregistrement reussi!');
+            return redirect()->route('agence.list')->with('success', 'Enregistrement réussi!');
         } else {
             # code...
-            return redirect()->back()->with('error', 'Enregistrement Echoue!');
+            return redirect()->back()->with('danger', 'Enregistrement Echoué!');
         }
     }
 }

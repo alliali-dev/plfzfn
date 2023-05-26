@@ -20,7 +20,7 @@
   --bs-gray-dark: #343a40;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
-  --bs-success: #198754;
+  --bs-success: #18c918;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
@@ -4048,7 +4048,7 @@ textarea.form-control-lg {
 
 .alert-success {
   color: #0f5132;
-  background-color: #d1e7dd;
+  background-color: #18c918;
   border-color: #badbcc; }
   .alert-success .alert-link {
     color: #0c4128; }
