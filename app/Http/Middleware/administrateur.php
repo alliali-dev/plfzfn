@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class administrateur
 {
@@ -21,10 +22,16 @@ class administrateur
 
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role_id != 4) {
+        if (Auth::check()) {
             # code...
-            return $this->Authorize();
+            if (auth()->user()->role_id != 4) {
+                # code...
+                return $this->Authorize();
+            }
+        } else {
+            return redirect()->route('login');
         }
+
         return $next($request);
     }
 }

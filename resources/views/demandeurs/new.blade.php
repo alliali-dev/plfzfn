@@ -25,21 +25,23 @@
                                     <label class="form-label" for="validationCustom01">Nom</label>
                                     <input class="form-control @error('nom') is-invalid @enderror" id="validationCustom01"
                                         type="text" value="{{ old('nom') }}" name="nom" autofocus>
-                                    <div class="alert alert-danger">
-                                        @error('nom')
+
+                                    @error('nom')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom02">Pr&eacute;noms</label>
                                     <input class="form-control @error('prenoms') is-invalid @enderror"
                                         id="validationCustom02" type="text" value="{{ old('prenoms') }}" name="prenoms">
-                                    <div class="alert alert-danger">
-                                        @error('prenoms')
+
+                                    @error('prenoms')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="date_naiss_demandeur">Date de naissance demandeur</label>
@@ -49,11 +51,12 @@
                                             value="{{ old('date_naiss_demandeur') }}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('date_naiss_demandeur')
+
+                                    @error('date_naiss_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -62,11 +65,12 @@
                                     <input class="form-control @error('lieu_naiss_demandeur') is-invalid @enderror"
                                         id="lieu_naiss_demandeur" type="text" placeholder="" name="lieu_naiss_demandeur"
                                         value="{{ old('lieu_naiss_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('lieu_naiss_demandeur')
+
+                                    @error('lieu_naiss_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="sexe_demandeur">Sexe</label>
@@ -81,22 +85,24 @@
                                             F&eacute;minin
                                         </option>
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('sexe_demandeur')
+
+                                    @error('sexe_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="sp_lieu_naiss_demandeur">S/P Lieu de naissance</label>
                                     <input class="form-control @error('sp_lieu_naiss_demandeur') is-invalid @enderror"
                                         id="sp_lieu_naiss_demandeur" type="text" placeholder=""
                                         name="sp_lieu_naiss_demandeur" value="{{ old('sp_lieu_naiss_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('sp_lieu_naiss_demandeur')
+
+                                    @error('sp_lieu_naiss_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -106,11 +112,12 @@
                                     <input class="form-control @error('nationalite_demandeur') is-invalid @enderror"
                                         id="nationalite_demandeur" type="text" placeholder="Ivoiriennne"
                                         name="nationalite_demandeur" value="{{ old('nationalite_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('nationalite_demandeur')
+
+                                    @error('nationalite_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="handicap_demandeur">Handicap</label><br><br>
@@ -118,11 +125,12 @@
                                         type="radio" name="handicap_demandeur" value="{{ 'Oui' }}">Oui&nbsp;
                                     <input class="@error('handicap_demandeur') is-invalid @enderror" id="handicap_demandeur"
                                         type="radio" name="handicap_demandeur" value="{{ 'Non' }}" checked>Non
-                                    <div class="alert alert-danger">
-                                        @error('handicap_demandeur')
+
+                                    @error('handicap_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="type_handicap_demandeur">Type d'Handicap</label>
@@ -133,11 +141,12 @@
                                         <option value="Mental">Mental</option>
                                         <option value="Physique">Physique</option>
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('type_handicap_demandeur')
+
+                                    @error('type_handicap_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -146,11 +155,12 @@
                                     <input class="form-control @error('piece_demandeur') is-invalid @enderror"
                                         id="piece_demandeur" type="text" placeholder="" name="piece_demandeur"
                                         value="{{ old('piece_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('piece_demandeur')
+
+                                    @error('piece_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="nature_piece_demandeur">Nature pi&egrave;ce
@@ -158,11 +168,12 @@
                                     <input class="form-control @error('nature_piece_demandeur') is-invalid @enderror"
                                         id="nature_piece_demandeur" type="text" placeholder=""
                                         name="nature_piece_demandeur" value="{{ old('nature_piece_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('nature_piece_demandeur')
+
+                                    @error('nature_piece_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="contact1_demandeur">Contact1 demandeur</label>
@@ -173,11 +184,12 @@
                                             pattern="[0-9]{10}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('contact1_demandeur')
+
+                                    @error('contact1_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -190,11 +202,12 @@
                                             pattern="[0-9]{10}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('contact2_demandeur')
+
+                                    @error('contact2_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="pers_contact_urgent">Personne &agrave;
@@ -205,11 +218,12 @@
                                             name="pers_contact_urgent" value="{{ old('pers_contact_urgent') }}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('pers_contact_urgent')
+
+                                    @error('pers_contact_urgent')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="contact_pers">Contact personne</label>
@@ -219,11 +233,12 @@
                                             name="contact_pers" value="{{ old('contact_pers') }}" pattern="[0-9]{10}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('contact_pers')
+
+                                    @error('contact_pers')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -232,33 +247,36 @@
                                     <input class="form-control @error('lieu_rh_demandeur') is-invalid @enderror"
                                         id="lieu_rh_demandeur" type="text" placeholder="" name="lieu_rh_demandeur"
                                         value="{{ old('lieu_rh_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('lieu_rh_demandeur')
+
+                                    @error('lieu_rh_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="sp_lieu_demandeur">Sous-prefecture</label>
                                     <input class="form-control @error('sp_lieu_demandeur') is-invalid @enderror"
                                         id="sp_lieu_demandeur" type="text" name="sp_lieu_demandeur"
                                         value="{{ old('sp_lieu_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('sp_lieu_demandeur')
+
+                                    @error('sp_lieu_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="nivetude_demandeur">Niveau &eacute;tude</label>
                                     <input class="form-control @error('nivetude_demandeur') is-invalid @enderror"
                                         id="nivetude_demandeur" type="text" name="nivetude_demandeur"
                                         value="{{ old('nivetude_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('nivetude_demandeur')
+
+                                    @error('nivetude_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -267,22 +285,24 @@
                                     <input class="form-control @error('specialite_demandeur') is-invalid @enderror"
                                         id="specialite_demandeur" type="text" name="specialite_demandeur"
                                         value="{{ old('specialite_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('specialite_demandeur')
+
+                                    @error('specialite_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="diplome_demandeur">Dipl&ocirc;me</label>
                                     <input class="form-control @error('diplome_demandeur') is-invalid @enderror"
                                         id="diplome_demandeur" type="text" name="diplome_demandeur"
                                         value="{{ old('diplome_demandeur') }}">
-                                    <div class="alert alert-danger">
-                                        @error('diplome_demandeur')
+
+                                    @error('diplome_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="annee_diplo_demandeur">Ann&eacute;&eacute;
@@ -290,11 +310,12 @@
                                     <input type="date"
                                         class="form-select @error('annee_diplo_demandeur') is-invalid @enderror"
                                         id="annee_diplo_demandeur" name="annee_diplo_demandeur">
-                                    <div class="alert alert-danger">
-                                        @error('annee_diplo_demandeur')
+
+                                    @error('annee_diplo_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -308,11 +329,12 @@
                                         <option value="Travailleur">Travailleur</option>
                                         <option value="Chômeur">Chômeur</option>
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('occup_actu_demandeur')
+
+                                    @error('occup_actu_demandeur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="utilisateur">Utilisateur</label>
@@ -322,11 +344,12 @@
                                             {{ auth()->user()->nom . ' ' . auth()->user()->prenoms }}
                                         </option>
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('utilisateur')
+
+                                    @error('utilisateur')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="programme">Programme</label>
@@ -341,11 +364,12 @@
                                         @empty
                                         @endforelse
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('programme')
+
+                                    @error('programme')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="mb-3">

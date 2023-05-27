@@ -71,12 +71,14 @@
                                             class="icon-email"></i></span>
                                     <input class="form-control @error('email') is-invalid @enderror" type="email"
                                         name="email" required placeholder="Test@gmail.com">
-                                </div>
-                                <span class="alert" role="alert">
-                                    @error('email')
-                                        {{ $msg }}
-                                    @enderror
-                                </span>
+                                </div><br>
+
+                                @error('email')
+                                    <span class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </span>
+                                @enderror
+
                             </div><br>
                             <div class="form-group">
                                 <label>Mot de passe</label>

@@ -43,7 +43,7 @@
                                             </tr>
                                         @empty
                                             <tr>
-                                                <td colspan="4" style="text-align: center;">
+                                                <td colspan="5" style="text-align: center;">
                                                     Aucune donn&eacute;&eacute;!
                                                 </td>
                                             </tr>
