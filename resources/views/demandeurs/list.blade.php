@@ -26,8 +26,10 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Nom & pr&eacute;noms</th>
+                                            <th scope="col">Sexe</th>
+                                            <th scope="col">Contact</th>
+                                            <th scope="col">Date De Naissance</th>
                                             <th scope="col">Programme</th>
-                                            <th scope="col">Cr&eacute;&eacute; le</th>
                                             {{-- <th scope="col">Modifi&eacute; le</th> --}}
                                             <th scope="col">Action</th>
 
@@ -39,8 +41,10 @@
                                             <tr>
                                                 <th scope="row">></th>
                                                 <td>{{ $item->nom . ' ' . $item->prenoms }}</td>
+                                                <td>{{ $item->sexe_demandeur }}</td>
+                                                <td>{{ $item->contact1_demandeur }}</td>
+                                                <td>{{ $item->date_naiss_demandeur }}</td>
                                                 <td>{{ $item->programme->libelle_programme }}</td>
-                                                <td>{{ $item->created_at }}</td>
                                                 {{-- <td>{{ $item->updated_at }}</td> --}}
                                                 <td>
                                                     @if ($item->programme->libelle_programme == 'THIMO')
