@@ -57,21 +57,17 @@
                     <div class="login-card">
                         <form enctype="multipart/form-data" method="POST" action="{{ route('login.store') }}"
                             class="theme-form login-form" style="border-radius: 10px;">
-                            <h4 style="text-align: center;">Connexion</h4>
-                            <h6 style="text-align: center; ">Content de vous revoir! <br>
-                                <small> Connectez-vous à votre compte.</small>
-                            </h6>
-                            <br><br>
-
+                            <h3><center><img class="img-fluid" src="{{ asset('assets/images/logo/logo2.jpg') }}" width="100px"; height="100px"; alt=""></center></h3>
+                            <h4>CONNEXION</h4>
+                            <h6>Content de te revoir! Connectez-vous à votre compte.</h6>
                             @csrf
-
                             <div class="form-group">
-                                <label>Adresse email </label>
+                                <label>Adresse e-mail </label>
                                 <div class="input-group"><span class="input-group-text"><i
                                             class="icon-email"></i></span>
                                     <input class="form-control @error('email') is-invalid @enderror" type="email"
                                         name="email" required placeholder="Test@gmail.com">
-                                </div><br>
+                                </div>
 
                                 @error('email')
                                     <span class="alert alert-danger" role="alert">
@@ -79,7 +75,7 @@
                                     </span>
                                 @enderror
 
-                            </div><br>
+                            </div>
                             <div class="form-group">
                                 <label>Mot de passe</label>
                                 <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
@@ -88,31 +84,11 @@
                                     <div class="show-hide"><span class="show"> </span></div>
                                 </div>
                             </div><br>
+
                             <div class="form-group">
-                                <div class="checkbox">
-                                    <input id="checkbox1" type="checkbox">
-                                    <label for="checkbox1">Restez connect&eacute;</label>
-                                </div><a class="link" href="forget-password.html">Mot de passe oublié?</a>
+                                <button class="btn btn-primary btn-block" type="submit">Connexion</button>
                             </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block" type="submit">S'identifier</button>
-                            </div>
-                            <!--<div class="login-social-title">
-                                <h5>Se connecter avec</h5>
-                            </div>
-                            <div class="form-group">
-                                <ul class="login-social">
-                                    <li><a href="https://www.linkedin.com/login" target="_blank"><i
-                                                data-feather="linkedin"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/login" target="_blank"><i
-                                                data-feather="twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/login" target="_blank"><i
-                                                data-feather="facebook"></i></a></li>
-                                    <li><a href="https://www.instagram.com/login" target="_blank"><i
-                                                data-feather="instagram"> </i></a></li>
-                                </ul>
-                            </div>-->
-                            {{-- <p>Je n'ai pas de compte?<a class="ms-2" href="log-in.html">Créer un compte</a></p> --}}
+
                         </form>
                     </div>
                 </div>

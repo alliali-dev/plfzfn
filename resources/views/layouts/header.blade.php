@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="dark-logo-wrapper">
-                <a href="{{ route('dashboard') }}"><img class="img-fluid" src="../assets/images/logo/dark-logo.png"
+                <a href="{{ route('dashboard') }}"><img class="img-fluid" src="../assets/images/logo/logo2.jpg"
                         alt="photo-profile"></a>
             </div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center"
