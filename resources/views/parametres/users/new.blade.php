@@ -17,29 +17,31 @@
                         <hr>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" enctype="multipart/form-data" method="POST"
-                            action="{{ route('users.store') }}" autocomplete="off">
+                        <form class="needs-validation" enctype="multipart/form-data" method="POST"
+                            action="{{ route('users.store') }}">
                             @csrf
                             <div class="row g-3">
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom01">Nom</label>
                                     <input class="form-control @error('nom') is-invalid @enderror" id="validationCustom01"
                                         type="text" value="{{ old('nom') }}" name="nom" autofocus>
-                                    <div class="alert alert-danger">
-                                        @error('nom')
+
+                                    @error('nom')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom02">Pr&eacute;noms</label>
                                     <input class="form-control @error('prenoms') is-invalid @enderror"
                                         id="validationCustom02" type="text" value="{{ old('prenoms') }}" name="prenoms">
-                                    <div class="alert alert-danger">
-                                        @error('prenoms')
+
+                                    @error('prenoms')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="contact">Contact</label>
@@ -49,11 +51,12 @@
                                             value="{{ old('contact') }}" pattern="[0-9]{10}">
 
                                     </div>
-                                    <div class="alert alert-danger">
-                                        @error('contact')
+
+                                    @error('contact')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div><br>
                             <div class="row g-3">
@@ -62,22 +65,24 @@
                                     <input class="form-control @error('email') is-invalid @enderror" id="validationCustom03"
                                         type="email" placeholder="xxxs@gmail.com" name="email"
                                         value="{{ old('email') }}">
-                                    <div class="alert alert-danger">
-                                        @error('email')
+
+                                    @error('email')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="password">Mot de passe</label>
                                     <input class="form-control @error('password') is-invalid @enderror" id="password"
                                         type="password" placeholder="*********" name="password"
                                         value="{{ old('password') }}">
-                                    <div class="alert alert-danger">
-                                        @error('password')
+
+                                    @error('password')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom04">Type d'utilisateur</label>
@@ -91,11 +96,12 @@
                                         @empty
                                         @endforelse
                                     </select>
-                                    <div class="alert alert-danger">
-                                        @error('role')
+
+                                    @error('role')
+                                        <div class="alert alert-danger">
                                             {{ $message }}
-                                        @enderror
-                                    </div>
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -103,10 +109,9 @@
                                     <div class="checkbox p-0">
 
                                     </div>
-
                                 </div>
                             </div>
-                            <button class="btn btn-secondary" type="reset">Annuler</button>&nbsp;
+                            <button class="btn btn-danger" type="reset">Annuler</button>&nbsp;
                             <button class="btn btn-primary" type="submit">Enregistrer</button>
                         </form>
                     </div>

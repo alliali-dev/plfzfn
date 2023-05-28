@@ -11,7 +11,7 @@
                             </div>
                             <div class="col-md-2">
                                 <h5>
-                                    <a href="{{ route('users.create') }}">Ajouter</a>&nbsp;<span><i
+                                    <a href="{{ route('demandeurs.create') }}">Ajouter</a>&nbsp;<span><i
                                             class="fa fa-plus-circle"></i></span>
                                 </h5>
                             </div>
@@ -26,9 +26,11 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Nom & pr&eacute;noms</th>
-                                            <th scope="col">Type</th>
+                                            <th scope="col">Programme</th>
                                             <th scope="col">Cr&eacute;&eacute; le</th>
-                                            <th scope="col">Modifi&eacute; le</th>
+                                            {{-- <th scope="col">Modifi&eacute; le</th> --}}
+                                            <th scope="col">Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -37,9 +39,15 @@
                                             <tr>
                                                 <th scope="row">></th>
                                                 <td>{{ $item->nom . ' ' . $item->prenoms }}</td>
-                                                <td>{{ $item->role->libelle_role }}</td>
+                                                <td>{{ $item->programme->libelle_programme }}</td>
                                                 <td>{{ $item->created_at }}</td>
-                                                <td>{{ $item->updated_at }}</td>
+                                                {{-- <td>{{ $item->updated_at }}</td> --}}
+                                                <td>
+                                                    @if ($item->programme->libelle_programme == 'THIMO')
+                                                        <a href="" class="btn btn-info">Visite</a>
+                                                    @else
+                                                    @endif
+                                                </td>
                                             </tr>
                                         @empty
                                             <tr>

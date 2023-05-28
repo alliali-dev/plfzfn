@@ -25,13 +25,14 @@
                                         <label class="col-form-label pt-0" for="exampleInputEmail1">Nom de l'agence</label>
                                         <input class="form-control @error('agence') is-invalid @enderror"
                                             id="exampleInputEmail1" type="text" name="agence"
-                                            aria-describedby="emailHelp" placeholder="Entrer le nom de l'agence">
-                                        <small class="form-text text-muted" id="emailHelp">
-                                            @error('agence')
-                                                {{ $mesaage }}
-                                            @enderror
-                                        </small>
+                                            aria-describedby="emailHelp" placeholder="Entrer le nom de l'agence"><br>
+                                        @error('agence')
+                                            <small class="form-text alert alert-danger" id="emailHelp">
+                                                {{ $message }}
+                                            </small>
+                                        @enderror
                                     </div>
+
                                     <div class="row"></div>
                                     <div class="card-footer">
                                         <button class="btn btn-secondary" type="reset">Annuler</button>

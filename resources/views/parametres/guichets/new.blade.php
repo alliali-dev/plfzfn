@@ -26,11 +26,13 @@
                                         <input class="form-control @error('guichet') is-invalid @enderror"
                                             id="exampleInputEmail1" type="text" name="guichet"
                                             aria-describedby="emailHelp" placeholder="Entrer le nom du guichet">
-                                        <small class="alert alert-danger" id="emailHelp">
-                                            @error('guichet')
+
+                                        @error('guichet')
+                                            <small class="alert alert-danger" id="emailHelp">
                                                 {{ $message }}
-                                            @enderror
-                                        </small>
+                                            </small>
+                                        @enderror
+
                                     </div>
                                     <br>
                                     <div class="row">
@@ -44,15 +46,16 @@
                                             @empty
                                             @endforelse
                                         </select>
-                                        <small class="alert alert-danger" id="emailHelp">
-                                            @error('agence')
+
+                                        @error('agence')
+                                            <small class="alert alert-danger" id="emailHelp">
                                                 {{ $message }}
-                                            @enderror
-                                        </small>
+                                            </small>
+                                        @enderror
                                     </div>
                                     <div class="row"></div>
                                     <div class="card-footer">
-                                        <button class="btn btn-secondary" type="reset">Annuler</button>
+                                        <button class="btn btn-danger" type="reset">Annuler</button>
                                         <button class="btn btn-primary" type="submit">Enregistrer</button>
                                     </div>
                                 </form>

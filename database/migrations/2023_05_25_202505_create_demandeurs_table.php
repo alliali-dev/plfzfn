@@ -26,6 +26,7 @@ class CreateDemandeursTable extends Migration
             $table->string("nationalite_demandeur")->nullable();
             $table->string("piece_demandeur")->nullable();
             $table->string("nature_piece_demandeur")->nullable();
+            $table->string("numero_piece")->nullable();
             $table->string("contact1_demandeur")->nullable();
             $table->string("contact2_demandeur")->nullable();
             $table->string("pers_contact_urgent")->nullable();
