@@ -31,7 +31,7 @@
                                             <th scope="col">Date De Naissance</th>
                                             <th scope="col">Programme</th>
                                             {{-- <th scope="col">Modifi&eacute; le</th> --}}
-                                            <th scope="col">Action</th>
+                                            {{-- <th scope="col">Action</th> --}}
 
                                         </tr>
                                     </thead>
@@ -46,12 +46,12 @@
                                                 <td>{{ $item->date_naiss_demandeur }}</td>
                                                 <td>{{ $item->programme->libelle_programme }}</td>
                                                 {{-- <td>{{ $item->updated_at }}</td> --}}
-                                                <td>
+                                                {{-- <td>
                                                     @if ($item->programme->libelle_programme == 'THIMO')
                                                         <a href="" class="btn btn-info">Visite</a>
                                                     @else
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @empty
                                             <tr>

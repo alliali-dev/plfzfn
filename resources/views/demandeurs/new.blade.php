@@ -222,7 +222,7 @@
                                     <label class="form-label" for="contact1_demandeur">Contact1 du demandeur</label>
                                     <div class="input-group">
                                         <input class="form-control @error('contact1_demandeur') is-invalid @enderror"
-                                            id="contact1_demandeur" type="phone" placeholder="0172363735"
+                                            id="contact1_demandeur" type="tel" placeholder="0172363735"
                                             name="contact1_demandeur" value="{{ old('contact1_demandeur') }}"
                                             pattern="[0-9]{10}" max="10"
                                             title="Uniquement un numero de 10 chiffres">
@@ -237,7 +237,7 @@
                                     <label class="form-label" for="contact2_demandeur">Contact2 du demandeur</label>
                                     <div class="input-group">
                                         <input class="form-control @error('contact2_demandeur') is-invalid @enderror"
-                                            id="contact2_demandeur" type="phone" placeholder="0172363735"
+                                            id="contact2_demandeur" type="tel" placeholder="0172363735"
                                             name="contact2_demandeur" value="{{ old('contact2_demandeur') }}"
                                             pattern="[0-9]{10}" max="10"
                                             title="Uniquement un numero de 10 chiffres">
@@ -401,8 +401,8 @@
                                         @if (old('occup_actu_demandeur')) {{ 'selected' }} @endif>
                                         <option value="" disabled selected>Choisir...</option>
                                         <!--<option value="Etudiant(e)">Etudiant(e)</option>
-                                                                                                                                                            <option value="Travailleur">Travailleur</option>
-                                                                                                                                                            <option value="Chômeur">Chômeur</option>-->
+                                                                                                                                                                <option value="Travailleur">Travailleur</option>
+                                                                                                                                                                <option value="Chômeur">Chômeur</option>-->
                                         <option value='EN ACTIVIT&Eacute;'>EN ACTIVIT&Eacute;</option>
                                         <option value='EN FORMATION'>EN FORMATION</option>
                                         <option value='AU CHÔMAGE'>AU CHÔMAGE</option>

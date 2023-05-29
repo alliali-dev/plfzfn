@@ -12,7 +12,7 @@ class Programme extends Model
     protected $table = "programmes";
     protected $fillable = [];
 
-    public function demander()
+    public function demandeur()
     {
         return $this->hasMany(Demandeur::class);
     }

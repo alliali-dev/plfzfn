@@ -1,12 +1,14 @@
 <header class="main-nav">
 
-        <div class="sidebar-user text-center"><a class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
+    <div class="sidebar-user text-center"><a class="setting-primary" href="javascript:void(0)"><i
+                data-feather="settings"></i></a><img class="img-90 rounded-circle"
+            src="{{ asset('assets/images/dashboard/1.png') }}" alt="">
         <div class="badge-bottom">
             {{-- <span class="badge badge-primary">New</span> --}}
         </div><a href="#">
             <h6 class="mt-3 f-14 f-w-600">{{ auth()->user()->nom . ' ' . auth()->user()->prenoms }}</h6>
         </a>
-       {{--  <p class="mb-0 font-roboto">Human Resources Department</p>
+        {{--  <p class="mb-0 font-roboto">Human Resources Department</p>
         <ul>
             <li><span><span class="counter">19.8</span>k</span>
                 <p>Follow</p>
@@ -93,8 +95,8 @@
                                 <a class="submenu-title" href="javascript:void(0)">AGR<span class="sub-arrow">
                                         <i class="fa fa-chevron-right"></i></span></a>
                                 <ul class="nav-sub-childmenu submenu-content">
-                                    <li><a href="">Ajouter</a></li>
-                                    <li><a href="">Liste</a></li>
+                                    <li><a href="{{ route('agr.create') }}">Ajouter</a></li>
+                                    <li><a href="{{ route('agr.list') }}">Liste</a></li>
                                 </ul>
                             </li>
                         </ul>
